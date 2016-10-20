@@ -12,13 +12,24 @@ class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var addUpdateButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     var imagePicker = UIImagePickerController()
+    var item : Item? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        
+        if item != nil {
+            imageView.image = UIImage(data: item!.image as! Data)
+            nameTextField.text = item!.who
+            addUpdateButton.setTitle("Update", for: .normal)
+        } else {
+            deleteButton.isHidden = true
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -39,15 +50,27 @@ class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func addTapped(_ sender: Any) {
         
+        if item != nil {
+            item!.who = nameTextField.text
+            item!.image = UIImagePNGRepresentation(imageView.image!) as NSData!
+        } else {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let item = Item(context: context)
+            item.who = nameTextField.text
+            item.image = UIImagePNGRepresentation(imageView.image!) as NSData!
+        }
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController!.popViewController(animated: true)
+    }
+    @IBAction func deleteTapped(_ sender: Any) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        let name = Item(context: context)
-        name.who = nameTextField.text
-        name.image = UIImagePNGRepresentation(imageView.image!) as NSData!
+        context.delete(item!)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }

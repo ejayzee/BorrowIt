@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="8oB-8Q-yih">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qs2-aD-YWN">
                             <connections>
-                                <segue destination="JOe-3k-myK" kind="show" id="9AO-9b-xG1"/>
+                                <segue destination="JOe-3k-myK" kind="show" identifier="itemSegue" id="9AO-9b-xG1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,12 +82,22 @@
                                     <action selector="addTapped:" destination="JOe-3k-myK" eventType="touchUpInside" id="xDz-so-SRx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X15-8j-SjO">
+                                <rect key="frame" x="165" y="449" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="JOe-3k-myK" eventType="touchUpInside" id="FPm-uD-HrQ"/>
+                                    <action selector="deleteTapped:" destination="JOe-3k-myK" eventType="touchUpInside" id="wlC-iI-6Ud"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NhY-PW-hdO" firstAttribute="width" secondItem="KlP-Np-oMa" secondAttribute="width" id="2DU-Ab-TYn"/>
                             <constraint firstItem="NhY-PW-hdO" firstAttribute="centerX" secondItem="RrO-Ae-CGh" secondAttribute="centerX" id="EsA-xc-Ncx"/>
                             <constraint firstItem="KlP-Np-oMa" firstAttribute="centerX" secondItem="RrO-Ae-CGh" secondAttribute="centerX" id="Lqi-pq-iNT"/>
+                            <constraint firstItem="X15-8j-SjO" firstAttribute="centerX" secondItem="RrO-Ae-CGh" secondAttribute="centerX" id="SQd-jj-mzs"/>
+                            <constraint firstItem="X15-8j-SjO" firstAttribute="top" secondItem="BU1-vG-0BM" secondAttribute="bottom" constant="15" id="Wgh-uR-kn6"/>
                             <constraint firstItem="BU1-vG-0BM" firstAttribute="top" secondItem="NhY-PW-hdO" secondAttribute="bottom" constant="45" id="a1z-zn-ags"/>
                             <constraint firstItem="BU1-vG-0BM" firstAttribute="centerX" secondItem="RrO-Ae-CGh" secondAttribute="centerX" id="g2U-qf-IAi"/>
                             <constraint firstItem="NhY-PW-hdO" firstAttribute="top" secondItem="KlP-Np-oMa" secondAttribute="bottom" constant="45" id="k6j-4i-cTR"/>
@@ -109,6 +119,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="BU1-vG-0BM" id="1Iq-aU-e6A"/>
+                        <outlet property="deleteButton" destination="X15-8j-SjO" id="aZm-ip-iwg"/>
                         <outlet property="imageView" destination="KlP-Np-oMa" id="X5N-Gh-ndB"/>
                         <outlet property="nameTextField" destination="NhY-PW-hdO" id="p0Q-nf-3pT"/>
                     </connections>
