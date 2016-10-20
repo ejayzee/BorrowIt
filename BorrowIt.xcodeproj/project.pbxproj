@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11A7DC71DB920B4002B9370 /* Unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = B11A7DC61DB920B4002B9370 /* Unknown.png */; };
 		B1BC9C511DB8720D00B56E89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC9C501DB8720D00B56E89 /* AppDelegate.swift */; };
 		B1BC9C531DB8720D00B56E89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC9C521DB8720D00B56E89 /* ViewController.swift */; };
 		B1BC9C561DB8720D00B56E89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BC9C541DB8720D00B56E89 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B11A7DC61DB920B4002B9370 /* Unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unknown.png; sourceTree = "<group>"; };
 		B1BC9C4D1DB8720D00B56E89 /* BorrowIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorrowIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1BC9C501DB8720D00B56E89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1BC9C521DB8720D00B56E89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				B1BC9C5F1DB8720D00B56E89 /* Info.plist */,
 				B1BC9C571DB8720D00B56E89 /* BorrowIt.xcdatamodeld */,
 				B1BC9C651DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png */,
+				B11A7DC61DB920B4002B9370 /* Unknown.png */,
 			);
 			path = BorrowIt;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BC9C5E1DB8720D00B56E89 /* LaunchScreen.storyboard in Resources */,
+				B11A7DC71DB920B4002B9370 /* Unknown.png in Resources */,
 				B1BC9C5B1DB8720D00B56E89 /* Assets.xcassets in Resources */,
 				B1BC9C661DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png in Resources */,
 				B1BC9C561DB8720D00B56E89 /* Main.storyboard in Resources */,
@@ -314,6 +318,7 @@
 				B1BC9C641DB8720D00B56E89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

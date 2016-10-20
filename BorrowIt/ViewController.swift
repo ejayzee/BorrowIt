@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
@@ -50,6 +50,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let nextVC = segue.destination as! BorrowViewController
         nextVC.item = sender as? Item
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let item = items[indexPath.row]
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            context.delete(item)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            do {
+                items = try context.fetch(Item.fetchRequest())
+                tableView.reloadData()
+            } catch {}
+        }
+        
+    }
+
     
 }
 

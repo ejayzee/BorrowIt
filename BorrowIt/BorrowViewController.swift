@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
@@ -22,6 +22,7 @@ class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, U
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        self.nameTextField.delegate = self
         
         if item != nil {
             imageView.image = UIImage(data: item!.image as! Data)
@@ -34,6 +35,7 @@ class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Do any additional setup after loading the view.
     }
 
+    
     @IBAction func photosTapped(_ sender: Any) {
         
         imagePicker.sourceType = .photoLibrary
@@ -65,6 +67,7 @@ class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, U
             item.who = nameTextField.text
             item.image = UIImagePNGRepresentation(imageView.image!) as NSData!
         }
+        
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
     }
@@ -73,6 +76,11 @@ class BorrowViewController: UIViewController, UIImagePickerControllerDelegate, U
         context.delete(item!)
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 }

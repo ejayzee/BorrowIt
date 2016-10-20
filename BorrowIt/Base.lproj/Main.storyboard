@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2012-03-17 at 10.44.07 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-Np-oMa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown.png" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-Np-oMa">
                                 <rect key="frame" x="48" y="84" width="280" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="SOl-E8-yQN"/>
@@ -149,6 +149,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2012-03-17 at 10.44.07 PM.png" width="795" height="442"/>
+        <image name="Unknown.png" width="225" height="225"/>
     </resources>
 </document>
