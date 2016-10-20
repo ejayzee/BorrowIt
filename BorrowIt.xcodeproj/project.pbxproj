@@ -13,6 +13,8 @@
 		B1BC9C591DB8720D00B56E89 /* BorrowIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1BC9C571DB8720D00B56E89 /* BorrowIt.xcdatamodeld */; };
 		B1BC9C5B1DB8720D00B56E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1BC9C5A1DB8720D00B56E89 /* Assets.xcassets */; };
 		B1BC9C5E1DB8720D00B56E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BC9C5C1DB8720D00B56E89 /* LaunchScreen.storyboard */; };
+		B1BC9C661DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = B1BC9C651DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png */; };
+		B1BC9C681DB8777400B56E89 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC9C671DB8777400B56E89 /* BorrowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B1BC9C5A1DB8720D00B56E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1BC9C5D1DB8720D00B56E89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1BC9C5F1DB8720D00B56E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1BC9C651DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2012-03-17 at 10.44.07 PM.png"; path = "../Screen Shot 2012-03-17 at 10.44.07 PM.png"; sourceTree = "<group>"; };
+		B1BC9C671DB8777400B56E89 /* BorrowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				B1BC9C501DB8720D00B56E89 /* AppDelegate.swift */,
 				B1BC9C521DB8720D00B56E89 /* ViewController.swift */,
+				B1BC9C671DB8777400B56E89 /* BorrowViewController.swift */,
 				B1BC9C541DB8720D00B56E89 /* Main.storyboard */,
 				B1BC9C5A1DB8720D00B56E89 /* Assets.xcassets */,
 				B1BC9C5C1DB8720D00B56E89 /* LaunchScreen.storyboard */,
 				B1BC9C5F1DB8720D00B56E89 /* Info.plist */,
 				B1BC9C571DB8720D00B56E89 /* BorrowIt.xcdatamodeld */,
+				B1BC9C651DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png */,
 			);
 			path = BorrowIt;
 			sourceTree = "<group>";
@@ -129,6 +135,7 @@
 			files = (
 				B1BC9C5E1DB8720D00B56E89 /* LaunchScreen.storyboard in Resources */,
 				B1BC9C5B1DB8720D00B56E89 /* Assets.xcassets in Resources */,
+				B1BC9C661DB8766B00B56E89 /* Screen Shot 2012-03-17 at 10.44.07 PM.png in Resources */,
 				B1BC9C561DB8720D00B56E89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +150,7 @@
 				B1BC9C591DB8720D00B56E89 /* BorrowIt.xcdatamodeld in Sources */,
 				B1BC9C531DB8720D00B56E89 /* ViewController.swift in Sources */,
 				B1BC9C511DB8720D00B56E89 /* AppDelegate.swift in Sources */,
+				B1BC9C681DB8777400B56E89 /* BorrowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
